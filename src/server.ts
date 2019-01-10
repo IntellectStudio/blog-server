@@ -16,7 +16,7 @@ class Server {
     this.routes()
   }
 
-  public config() {
+  public config(): void {
     this.app.use(bodyParser.urlencoded({ extended: true }))
     this.app.use(bodyParser.json())
     this.app.use(cookieParser())
@@ -26,13 +26,12 @@ class Server {
     this.app.use(cors())
   }
 
-  public routes() {
+  public routes(): void {
     this.app.use('/', (req: express.Request, res: express.Response) => {
       res.json({
-        data: 2,
+        data: 2
       })
     })
   }
 }
-
-export default new Server().app
+export const server: express.Application = new Server().app

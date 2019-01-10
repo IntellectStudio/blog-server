@@ -1,6 +1,6 @@
 # blog-server
 
-A simple express server.
+A simple express server using TypeScript, MongoDB with mongoose, JsonWebToken.
 
 ## Installation
 
