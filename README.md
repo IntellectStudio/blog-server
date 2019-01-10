@@ -2,7 +2,7 @@
 
 A simple express server.
 
-# Installation
+## Installation
 
 ```
 yarn // install dependencies
