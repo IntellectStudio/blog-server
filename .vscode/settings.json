@@ -1,0 +1,7 @@
+{
+  "tslint.enable":true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "tslint.alwaysShowStatus": true,
+  "tslint.packageManager": "yarn",
+  "prettier.tslintIntegration": true
+}
