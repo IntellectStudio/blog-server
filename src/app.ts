@@ -20,6 +20,7 @@ class App {
   }
 
   private config(): void {
+    // dotenv.config()
     this.instance.use(bodyParser.urlencoded({ extended: true }))
     this.instance.use(bodyParser.json())
     this.instance.use(cookieParser())
@@ -28,19 +29,20 @@ class App {
     this.instance.use(helmet())
     this.instance.use(cors())
 
-    logger.info('√ Application Successfully Configured')
+    logger.info('Application configured...... ')
   }
 
   private routes(): void {
-    this.instance.use('/', (req: express.Request, res: express.Response) => {
+    this.instance.use('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+      throw new Error('yayayay')
       res.json({
         data: 11,
-        mode: process.env,
+        mode: process.env.NODE_ENV,
+        logpath: process.env.LOG_PATH,
         say: 'yes'
       })
     })
-    logger.info('√ Application Successfully Routed')
-    logger.debug('√ Application Successfully Routed')
+    logger.info('Application routers installed......')
   }
 }
 

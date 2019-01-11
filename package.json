@@ -9,8 +9,8 @@
   "private": true,
   "scripts": {
     "lint": "tslint --fix",
-    "compile:dev": "tsc && NODE_ENV=development node build/index.js",
-    "compile:prod": "tsc && NODE_ENV=production node build/index.js",
+    "compile:dev": "tsc && NODE_ENV=development node -r dotenv/config build/index.js",
+    "compile:prod": "tsc && NODE_ENV=production node -r dotenv/config build/index.js",
     "dev": "nodemon -e ts --exec \"yarn run compile:dev\"",
     "prod": "nodemon -e ts --exec \"yarn run compile:prod\""
   },
@@ -39,6 +39,7 @@
     "@types/cookie-parser": "^1.4.1",
     "@types/cors": "^2.8.4",
     "@types/debug": "^0.0.31",
+    "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.0",
     "@types/helmet": "^0.0.42",
     "@types/mongoose": "^5.3.7",
