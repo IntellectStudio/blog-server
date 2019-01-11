@@ -1,6 +1,7 @@
 module.exports = {
-  title: 'Hello VuePress',
-  description: 'Just playing around',
+  host: 3010,
+  base: '/docs/',
   dest: 'build/docs',
-  base: '/docs/'
+  title: 'Intellect Studio Wiki',
+  description: 'Documentation',
 }
