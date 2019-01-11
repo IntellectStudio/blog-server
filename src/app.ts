@@ -7,6 +7,7 @@ import * as helmet from 'helmet'
 import * as mongoose from 'mongoose'
 import * as morgan from 'morgan'
 import { logger, stream } from './middlewares/winston'
+import * as path from 'path'
 
 class App {
   public instance: express.Application
@@ -33,8 +34,7 @@ class App {
   }
 
   private routes(): void {
-    this.instance.use('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
-      throw new Error('yayayay')
+    this.instance.get('/', (req: express.Request, res: express.Response) => {
       res.json({
         data: 11,
         mode: process.env.NODE_ENV,
@@ -42,6 +42,8 @@ class App {
         say: 'yes'
       })
     })
+    this.instance.use('/docs', express.static(path.join(__dirname, 'docs')))
+
     logger.info('Application routers installed......')
   }
 }

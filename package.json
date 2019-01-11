@@ -9,10 +9,12 @@
   "private": true,
   "scripts": {
     "lint": "tslint --fix",
-    "compile:dev": "tsc && NODE_ENV=development node -r dotenv/config build/index.js",
-    "compile:prod": "tsc && NODE_ENV=production node -r dotenv/config build/index.js",
+    "compile:dev": "tsc && yarn docs:build && NODE_ENV=development node -r dotenv/config build/index.js",
+    "compile:prod": "tsc && yarn docs:build && NODE_ENV=production node -r dotenv/config build/index.js",
     "dev": "nodemon -e ts --exec \"yarn run compile:dev\"",
-    "prod": "nodemon -e ts --exec \"yarn run compile:prod\""
+    "prod": "nodemon -e ts --exec \"yarn run compile:prod\"",
+    "docs": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "@types/winston": "^2.4.4",
@@ -50,7 +52,8 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.12.0",
     "tslint-microsoft-contrib": "^6.0.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "vuepress": "^0.14.8"
   },
   "nodemonConfig": {
     "ignore": [
