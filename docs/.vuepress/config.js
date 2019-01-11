@@ -1,7 +1,30 @@
 module.exports = {
-  host: 3010,
+  port: 3010,
   base: '/docs/',
   dest: 'build/docs',
-  title: 'Intellect Studio Wiki',
+  title: 'Wiki',
   description: 'Documentation',
+  themeConfig: {
+    search: true,
+    lastUpdated: 'Last Updated',
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Express App', link: '/express/' },
+      { text: '即时聊天', link: '/chat/' },
+      { text: 'Github', link: 'https://github.com/IntellectStudio' },
+    ],
+    displayAllHeaders: true,
+    sidebar: {
+      '/express/': [
+        ''
+      ],
+      '/chat/': [
+        '',
+        ['userstory', '用户故事']
+      ],
+      '/': [
+        ''
+      ]
+    }
+  }
 }
