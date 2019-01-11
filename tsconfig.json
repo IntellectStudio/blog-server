@@ -38,5 +38,6 @@
     "scripts",
     "__tests__",
     "**/*.spec.ts"
-  ]
+  ],
+  "watch": false
 }

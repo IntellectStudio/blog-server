@@ -1,8 +1,8 @@
 import * as http from 'http'
-import Server from './server'
+import { app } from './app'
 
-Server.set('port', 3000)
+app.set('port', 3000)
 
-const server = http.createServer(Server)
+const instance: http.Server = http.createServer(app)
 
-server.listen(3000)
+instance.listen(3000)

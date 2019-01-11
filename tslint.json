@@ -1,11 +1,14 @@
 {
     "defaultSeverity": "error",
     "extends": [
+        "tslint:recommended",
         "tslint-microsoft-contrib"
     ],
     "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
     "rules": {
         "quotemark": [true, "single"],
-        "semicolon": [true, "never"]
+        "semicolon": [true, "never"],
+        "no-relative-imports": false,
+        "no-backbone-get-set-outside-model": false
     }
 }
