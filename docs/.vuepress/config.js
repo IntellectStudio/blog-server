@@ -17,7 +17,8 @@ module.exports = {
     sidebar: {
       '/express/': [
         '',
-        ['pm2', 'PM2 Cheat Sheet']
+        ['pm2', 'PM2 Cheat Sheet'],
+        ['git', 'Git Notes']
       ],
       '/chat/': [
         '',
