@@ -26,6 +26,9 @@ staged 修改过而且add了，但是没commit
 4. ``git remote // to see the remote repo``
 5. ``git remote add <remote repo name> <link> // add remote repo to current local repo with name <remote repo name>, origin is used in most case``
 6. ``git remote remove <name> // to remove remote repo`` 说明：可以添加多个remote repo，不知道有什么作用
+7. ``git reset --hard HEAD // 调整当前HEAD指针到上一次commit的时候``
+   ``git reset --hard HEAD^ // 调整当前HEAD指针到上上次commit的时候``
+8. ``git reflog // 查看所做的head操作``
 
 ## 回到从前
 场景一：
@@ -41,6 +44,7 @@ staged 修改过而且add了，但是没commit
 已经加入了stage, 现在是想重新回到modified状态，我们可以使用 ``git reset app.js``, 这个命令会把app.js返回到``git add app.js``之前，而不是最新版本，也就是
 modified状态。
 
+场景三：
 
 ## Get Started
 1. Download and install git
