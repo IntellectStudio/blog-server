@@ -3,11 +3,12 @@ import * as compression from 'compression'
 import * as cookieParser from 'cookie-parser'
 import * as cors from 'cors'
 import * as express from 'express'
+import * as handlebars from 'express-handlebars'
 import * as helmet from 'helmet'
-import * as mongoose from 'mongoose'
 import * as morgan from 'morgan'
-import { logger, stream } from './middlewares/winston'
 import * as path from 'path'
+import { logger, stream } from './middlewares/winston'
+import { logsRouter } from './routers/logsRouter'
 
 class App {
   public instance: express.Application
@@ -30,18 +31,26 @@ class App {
     this.instance.use(helmet())
     this.instance.use(cors())
 
+    logger.debug(path.join(__dirname, '../src/views'))
+    this.instance.set('views', path.join(__dirname, '../src/views'))
+    this.instance.engine('handlebars', handlebars({
+      defaultLayout: 'main',
+      layoutsDir: path.join(__dirname, '../src/views/layouts')
+    }))
+    this.instance.set('view engine', 'handlebars')
+
     logger.info('Application configured...... ')
   }
 
   private routes(): void {
     this.instance.get('/', (req: express.Request, res: express.Response) => {
       res.json({
-        data: 11,
         mode: process.env.NODE_ENV,
-        logpath: process.env.LOG_PATH,
-        say: 'yes'
+        logpath: process.env.LOG_PATH
       })
     })
+
+    this.instance.use('/logs', logsRouter)
     this.instance.use('/docs', express.static(path.join(__dirname, 'docs')))
 
     logger.info('Application routers installed......')

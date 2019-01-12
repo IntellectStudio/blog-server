@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Level</th>
+      <th scope="col">Timestamp</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each logs}}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ level }}</td>
+        <td>{{ timestamp }}</td>
+        <td>{{ message }}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

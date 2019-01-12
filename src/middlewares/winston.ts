@@ -10,8 +10,8 @@ const makeFileTransportOption: Function = (logginLevel: string, filename: string
     maxsize: 5242880, //5MB
     maxFiles: 5,
     format: format.combine(
+      format.timestamp(),
       format.json(),
-      format.timestamp()
     )
   }
 }

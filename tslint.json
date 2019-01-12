@@ -9,6 +9,8 @@
         "quotemark": [true, "single"],
         "semicolon": [true, "never"],
         "no-relative-imports": false,
-        "no-backbone-get-set-outside-model": false
+        "no-backbone-get-set-outside-model": false,
+        "non-literal-fs-path": false,
+        "newline-per-chained-call": false
     }
 }
