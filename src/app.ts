@@ -30,7 +30,6 @@ class App {
     this.instance.use(helmet())
     this.instance.use(cors())
 
-    logger.debug(path.join(__dirname, '../src/views'))
     this.instance.set('views', path.join(__dirname, '../src/views'))
     this.instance.engine('handlebars', handlebars({
       defaultLayout: 'main',

@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "deploy": "pm2 deploy ecosystem.config.js production setup",
+    "deploy:update": "pm2 deploy ecosystem.config.js production update",
     "compile:dev": "tsc && concurrently \"yarn docs:dev\" \"NODE_ENV=development node build/index.js\" ",
     "compile:prod": "tsc && yarn docs:build",
     "dev": "nodemon -e ts --exec \"yarn run compile:dev\"",
