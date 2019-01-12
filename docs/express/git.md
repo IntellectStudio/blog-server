@@ -8,12 +8,12 @@
 5. ``git push // push to remote repo``
 6. ``git pull // pull latest from remote repo``
 7. ``git clone clone a // remote repo to local repo``
-8. ``git log // 查看过去提交记录``
+8. ``git log // 查看过去提交记录 --oneline会显示单行的提交记录，比较简洁`` 
 9. ``git diff // unstaged比对过去staged文件, --cached 会比对 staged和staged有什么区别``
+10.
 
 ## 基础知识
 1. 4个状态：untracked unmodified modified staged
-2. 
 
 ## More Command
 1. ``git branch <branch name> // create a branch called <branch name>``
@@ -23,10 +23,10 @@
 5. ``git remote add <remote repo name> <link> // add remote repo to current local repo with name <remote repo name>, origin is used in most case``
 6. ``git remote remove <name> // to remove remote repo`` 说明：可以添加多个remote repo，不知道有什么作用
 
-
+## 回到从前
+如何这次commit之后忘掉了commit一些东西，需要重新commit，但是不新开一次commit，我们就需要修改上一次的commit，然后重新提交
 
 ## Get Started
-
 1. Download and install git
 2. create a folder with certain files in it. (e.g index.html and app.js)
 3. open it with git bash
