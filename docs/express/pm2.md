@@ -19,3 +19,5 @@ Once PM2 is started, it will automatically create these folders:
 `pm2 delete express`
 
 `pm2 list`
+
+`pm2 deploy ecosystem.config.js production update`
