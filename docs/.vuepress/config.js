@@ -16,7 +16,8 @@ module.exports = {
     displayAllHeaders: true,
     sidebar: {
       '/express/': [
-        ''
+        '',
+        ['pm2', 'PM2 Cheat Sheet']
       ],
       '/chat/': [
         '',

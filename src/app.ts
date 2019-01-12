@@ -22,7 +22,6 @@ class App {
   }
 
   private config(): void {
-    // dotenv.config()
     this.instance.use(bodyParser.urlencoded({ extended: true }))
     this.instance.use(bodyParser.json())
     this.instance.use(cookieParser())

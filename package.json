@@ -8,12 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "pre": "tsc && yarn docs:build && NODE_ENV=production node -r dotenv/config",
-    "lint": "tslint --fix",
-    "compile:dev": "tsc && concurrently \"yarn docs:dev\" \"NODE_ENV=development node -r dotenv/config build/index.js\" ",
-    "compile:prod": "tsc && yarn docs:build && NODE_ENV=production node -r dotenv/config build/index.js",
+    "compile:dev": "tsc && concurrently \"yarn docs:dev\" \"NODE_ENV=development node build/index.js\" ",
+    "compile:prod": "tsc && yarn docs:build",
     "dev": "nodemon -e ts --exec \"yarn run compile:dev\"",
-    "prod": "nodemon -e ts --exec \"yarn run compile:prod\"",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

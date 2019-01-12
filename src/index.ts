@@ -1,5 +1,8 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 import * as http from 'http'
-import {AddressInfo} from 'net'
+import { AddressInfo } from 'net'
 import { app } from './app'
 import { logger } from './middlewares/winston'
 const port: number = normalizePort(process.env.PORT || 3000)
@@ -39,7 +42,8 @@ function onError(error: NodeJS.ErrnoException): void {
 }
 
 function onListening(): void {
-  const addr: AddressInfo | string  = instance.address()
-  const bind: string = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`
+  const addr: AddressInfo | string = instance.address()
+  const bind: string =
+    typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`
   logger.info(`Application starts on port ${port}......`)
 }
