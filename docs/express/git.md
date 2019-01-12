@@ -28,7 +28,9 @@ staged 修改过而且add了，但是没commit
 6. ``git remote remove <name> // to remove remote repo`` 说明：可以添加多个remote repo，不知道有什么作用
 7. ``git reset --hard HEAD // 调整当前HEAD指针到上一次commit的时候``
    ``git reset --hard HEAD^ // 调整当前HEAD指针到上上次commit的时候``
+   ``git checkout <commit id> // 也是可以直接将指正跳转到对应commit id的位置的，通过git checkout master可以回到最新的位置``
 8. ``git reflog // 查看所做的head操作``
+9. ``git log --graph --oneline --all // 可以查看git tree``
 
 ## 回到从前
 场景一：
