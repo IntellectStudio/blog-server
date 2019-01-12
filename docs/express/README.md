@@ -14,3 +14,11 @@ yarn docs:dev     // 文档写作模式
 yarn docs:build   // 文档打包
 yarn compile:prod // 生产部署
 ````
+
+## 日志查看
+::: tip
+后续如果日志过多，导致单屏展示有问题再分页展示。
+:::
+[全部日志](http://im.deuslux.org/logs)
+
+[错误日志](http://im.deuslux.org/logs/error)
