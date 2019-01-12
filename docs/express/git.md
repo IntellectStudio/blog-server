@@ -13,7 +13,11 @@
 10.
 
 ## 基础知识
-1. 4个状态：untracked unmodified modified staged
+1. 4个状态：
+untracked 未加入版本控制 
+unmodified commit之后，最新的版本
+modified 修改过但是没add 
+staged 修改过而且add了，但是没commit
 
 ## More Command
 1. ``git branch <branch name> // create a branch called <branch name>``
@@ -24,7 +28,19 @@
 6. ``git remote remove <name> // to remove remote repo`` 说明：可以添加多个remote repo，不知道有什么作用
 
 ## 回到从前
-如何这次commit之后忘掉了commit一些东西，需要重新commit，但是不新开一次commit，我们就需要修改上一次的commit，然后重新提交
+场景一：
+从staged到staged 
+上次commit忘记commit一些东西，需要重新commit，但是不新开一次commit，我们就需要修改上一次的commit，然后重新提交
+假设最近一次提交id为dfaaf40，信息为"change 1"
+我们需要重新提交一次，假设我们修改文件app.js，然后``git add app.js``，使用 ``git commit --amend --no-edit``去补提交到上一次提交
+执行完之后，我们的提交就会被加到上一次提交中，``--no-edit``会保持上一次的commit message, 所以上一次的提交信息不变，但是commmit id会变化，因为我们补提交了
+
+场景二：
+从staged 到 modified
+我们改写了一个文件app.js，然后``git add app.js``，把这个文件加入到了staging area，现在想重新修改这个文件，但是不重新add。这时候使用``git status``会发现这个文件
+已经加入了stage, 现在是想重新回到modified状态，我们可以使用 ``git reset app.js``, 这个命令会把app.js返回到``git add app.js``之前，而不是最新版本，也就是
+modified状态。
+
 
 ## Get Started
 1. Download and install git
