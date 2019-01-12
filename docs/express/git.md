@@ -8,6 +8,12 @@
 5. ``git push // push to remote repo``
 6. ``git pull // pull latest from remote repo``
 7. ``git clone clone a // remote repo to local repo``
+8. ``git log // 查看过去提交记录``
+9. ``git diff // unstaged比对过去staged文件, --cached 会比对 staged和staged有什么区别``
+
+## 基础知识
+1. 4个状态：untracked unmodified modified staged
+2. 
 
 ## More Command
 1. ``git branch <branch name> // create a branch called <branch name>``
