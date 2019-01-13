@@ -48,6 +48,13 @@ modified状态。
 
 场景三：
 
+## Common Workflow
+场景： 假设现在只有master分支，现在有若干features, 你被要求再开发一个feature
+1. 首先，使用`git pull`拉取最新的代码，然后执行`git branch feature1`, 新建一个分支，然后`git checkout feature1`切换到feature1分支
+2. 然后开始编写你这次feature1的代码，使用`git add .`, `git commit -m 'add feature1`
+3. 回到master分支，执行`git pull`, 切换到feature1分支 `git checkout feature1`，然后`git merge master`
+4. 提交一个pull request，然后等待merge
+
 ## Get Started
 1. Download and install git
 2. create a folder with certain files in it. (e.g index.html and app.js)
