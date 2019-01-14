@@ -25,7 +25,7 @@ class App {
     // what is body parser
     this.instance.use(bodyParser.urlencoded({ extended: true }))
     this.instance.use(bodyParser.json())
-    // what is cookie parser
+    // what is cookie parser 2
     this.instance.use(cookieParser())
     this.instance.use(morgan(':method :url :status :res[content-length] - :response-time ms', {stream: stream}))
     this.instance.use(compression())
