@@ -12,12 +12,10 @@ Once PM2 is started, it will automatically create these folders:
   * `$HOME/.pm2/conf.js` PM2 Configuration
 
 ## Command
-`pm2 start ./is-express/build/index.js --name express --node-args "-r dotenv/config"`
+`pm2 show <app name>`
 
-`pm2 show express`
-
-`pm2 delete express`
+`pm2 delete <app name>`
 
 `pm2 list`
 
-`pm2 deploy ecosystem.config.js production update`
+`pm2 logs <app name>`

@@ -1,16 +1,15 @@
 # Git Notes
 
-## Basic Command
-1. ``git init // initialize local git repo``
-2. ``git add <file> // add files to index (staging area)``
-3. ``git status // check status of working tree (staging area)`` 
-4. ``git commit  // commit changes in index``
-5. ``git push // push to remote repo``
-6. ``git pull // pull latest from remote repo``
-7. ``git clone clone a // remote repo to local repo``
-8. ``git log // 查看过去提交记录 --oneline会显示单行的提交记录，比较简洁`` 
-9. ``git diff // unstaged比对过去staged文件, --cached 会比对 staged和staged有什么区别``
-10.
+## Basic Commands
+1. ``git init`` initialize local git repo
+2. ``git add <file>`` add files to index (staging area)
+3. ``git status`` check status of working tree (staging area) 
+4. ``git commit`` push to remote repo
+5. ``git push`` push to remote repo
+6. ``git pull`` pull latest from remote repo
+7. ``git clone`` clone a remote repo to local repo
+8. ``git log`` 查看过去提交记录 `--oneline`会显示单行的提交记录，比较简洁 
+9. ``git diff`` unstaged比对过去staged文件, --cached 会比对 staged和staged有什么区别
 
 ## 基础知识
 1. 4个状态：
@@ -19,7 +18,7 @@ unmodified commit之后，最新的版本
 modified 修改过但是没add 
 staged 修改过而且add了，但是没commit
 
-## More Command
+## More Commands
 1. ``git branch <branch name> // create a branch called <branch name>``
 2. ``git checkout <branch name> // switch current branch to <branch name>, master is the main branch's name``
 3. ``git merge <branch name> -m <merge message> // merge target branch to current branch, 子分支之间也可以merge`` // 如何revert merge??
@@ -45,8 +44,6 @@ staged 修改过而且add了，但是没commit
 我们改写了一个文件app.js，然后``git add app.js``，把这个文件加入到了staging area，现在想重新修改这个文件，但是不重新add。这时候使用``git status``会发现这个文件
 已经加入了stage, 现在是想重新回到modified状态，我们可以使用 ``git reset app.js``, 这个命令会把app.js返回到``git add app.js``之前，而不是最新版本，也就是
 modified状态。
-
-场景三：
 
 ## Common Workflow
 场景： 假设现在只有master分支，现在有若干features, 你被要求再开发一个feature
