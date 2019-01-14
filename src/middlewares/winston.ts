@@ -52,6 +52,6 @@ export const logger: Logger = createLogger({
 
 export const stream: StreamOptions = {
   write: (message: string): void => {
-    logger.info(message)
+    logger.debug(message)
   }
 }

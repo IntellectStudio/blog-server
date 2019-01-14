@@ -8,13 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    {{#each logs}}
+    {{#iter logs}}
       <tr>
-        <th scope="row">1</th>
+        <th scope="row"> {{i}} </th>
         <td>{{ level }}</td>
         <td>{{ timestamp }}</td>
         <td>{{ message }}</td>
       </tr>
-    {{/each}}
+    {{/iter}}
   </tbody>
 </table>
