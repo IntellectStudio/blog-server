@@ -22,6 +22,7 @@ class App {
   }
 
   private config(): void {
+    // what is body parser
     this.instance.use(bodyParser.urlencoded({ extended: true }))
     this.instance.use(bodyParser.json())
     this.instance.use(cookieParser())
