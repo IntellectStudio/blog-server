@@ -25,7 +25,7 @@ const makeFileTransportOption: Function = (logginLevel: string, filename: string
     maxFiles: 5,
     format: format.combine(
       format.timestamp(),
-      format.json(),
+      format.json()
     )
   }
 }
