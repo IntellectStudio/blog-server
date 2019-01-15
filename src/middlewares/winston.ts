@@ -2,7 +2,6 @@ import * as fs from 'fs'
 import { StreamOptions } from 'morgan'
 import * as path from 'path'
 import {createLogger, format, Logger, transports } from 'winston'
-
 /**
  * check if process.env.LOG_PATH exists
  * if target folder does not exists, create one

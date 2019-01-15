@@ -1,5 +1,11 @@
+const dotenv = require('dotenv')
+let {parsed, error} = dotenv.config()
+if (error) {
+  throw error
+}
+
 module.exports = {
-  port: 3010,
+  port: parsed.DOCS_PORT || 3010,
   base: '/docs/',
   dest: 'build/docs',
   title: 'Wiki',

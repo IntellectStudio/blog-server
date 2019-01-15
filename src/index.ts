@@ -1,11 +1,11 @@
 import * as dotenv from 'dotenv'
-const result: dotenv.DotenvConfigOutput = dotenv.config()
-if (result.error) {
-  throw result.error
+const {parsed, error}: dotenv.DotenvConfigOutput = dotenv.config()
+if (error) {
+  throw error
 }
 import { logger } from './middlewares/winston'
 
-logger.info(`.env file is loaded. Results: `, result.parsed)
+logger.info(`.env file is loaded. Results: `, parsed)
 
 import * as http from 'http'
 import { AddressInfo } from 'net'
