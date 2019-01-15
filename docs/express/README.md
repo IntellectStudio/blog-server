@@ -5,7 +5,8 @@
 
 ## 安装与开发
 1. 安装Node.js, 安装后执行`node -v`，如果成功显示版本号则安装成功
-3. 安装yarn，安装后执行`yarn version`，如果成功显示版本号则安装成功
+2. 安装yarn，安装后执行`yarn version`，如果成功显示版本号则安装成功
+3. 使用yarn安装nodemon，这是一个监听文件改动并重启node服务的库，`yarn global add nodemon`
 4. clone repo: `git clone https://github.com/IntellectStudio/blog-server.git`
 5. 进入目标文件夹后执行`yarn`，该命令会自动安装所有dependencies
 6. 执行yarn app:dev 启动express开发服务，访问`localhost:3000`

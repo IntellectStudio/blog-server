@@ -1,10 +1,15 @@
 import * as dotenv from 'dotenv'
-dotenv.config()
+const result: dotenv.DotenvConfigOutput = dotenv.config()
+if (result.error) {
+  throw result.error
+}
+import { logger } from './middlewares/winston'
+
+logger.info(`.env file is loaded. Results: `, result.parsed)
 
 import * as http from 'http'
 import { AddressInfo } from 'net'
 import { app } from './app'
-import { logger } from './middlewares/winston'
 const port: number = normalizePort(process.env.PORT || 3000)
 app.set('port', port)
 
